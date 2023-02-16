@@ -1,0 +1,40 @@
+# -*- mode: i3wm-config -*-
+#
+# i3 config file (v4)
+#
+# Reference: https://i3wm.org/docs/userguide.html
+
+set $mod Mod4
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block in statusbar file.
+font pango:Ubuntu 9
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1:term"
+set $ws2 "2:code"
+set $ws3 "3:web"
+set $ws4 "4:docs"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7:back"
+set $ws8 "8:games"
+set $ws9 "9:other"
+set $ws10 "10:zettel"
+
+# workspace "9:other" output HDMI1
+
+include colors
+
+include gaps
+
+include statusbar
+
+include primary_keybindings
+
+include secondary_keybindings
+
+include assignments
+
+include autostart

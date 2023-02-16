@@ -1,0 +1,21 @@
+# -*- mode: i3wm-config -*-
+
+assign [class="Alacritty"] $ws1
+assign [class="Emacs"] $ws2
+assign [class="Chromium"] $ws3
+assign [class="KopiaUI"] $ws7
+assign [class="Timeshift-gtk"] $ws7
+assign [class="Steam"] $ws8
+assign [class="falloutw.exe"] $ws8
+assign [class="obsidian"] $ws10
+assign [class="Zotero"] $ws10
+
+for_window [class="Chromium"] layout tabbed
+for_window [class="obsidian"] layout tabbed
+for_window [class="Zotero"] layout tabbed
+
+for_window [class="Zotero" instance="Toplevel"] floating enable
+for_window [class=".*.py"] floating enable
+for_window [class="launcher"] floating enable
+for_window [class="launcher"] border normal
+for_window [class="launcher"] title_window_icon true

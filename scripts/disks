@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+
+set uuids 6b98f301-0604-4015-8139-5eb5287286d2 C2726298726290C9
+set operation $argv[-1]
+
+if test -z $operation
+    echo You must specify either \"mount\" or \"unmount\" as an operation
+    exit
+end
+
+for uuid in $uuids
+    set device /dev/disk/by-uuid/$uuid
+    udisksctl $operation -b $device
+end

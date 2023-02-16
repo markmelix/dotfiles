@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+set mac "{{headphones_mac}}"
+
+set operation $argv[-1]
+
+bluetoothctl $operation $mac

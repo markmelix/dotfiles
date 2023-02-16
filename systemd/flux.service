@@ -1,0 +1,8 @@
+[Unit]
+Description=Display colour temperature adjustment
+
+[Service]
+ExecStart={{command_output "echo -n $HOME"}}/scripts/flux
+
+[Install]
+WantedBy=default.target

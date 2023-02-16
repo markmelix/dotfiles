@@ -1,0 +1,12 @@
+# -*- mode: i3wm-config -*-
+
+# See https://thomashunter.name/i3-configurator
+
+# class                 border  bground text    indicator child_border
+client.focused          #109648 #109648 #F7F0F0 #109648   #363537
+client.focused_inactive #363537 #363537 #F7F0F0 #363537   #363537
+client.unfocused        #363537 #363537 #F7F0F0 #363537   #363537
+client.urgent           #ED7D3A #ED7D3A #F7F0F0 #363537   #363537
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #000000
+
+client.background       #363537

@@ -1,8 +1,59 @@
-[helpers]
-
 [default]
-depends = []
+depends = ["systemd", "backup", "scripts", "firejail", "shell", "emacs", "flameshot", "xorg", "picom", "i3status"]
 
-[default.files]
+[systemd.files]
+systemd = "~/.config/systemd/user"
 
-[default.variables]
+[backup.files]
+kopiaignore = { target = "~/.kopiaignore", type = "template" }
+
+[scripts.files]
+scripts = { target = "~/scripts", type = "template" }
+
+[firejail.files]
+firejail = "~/.config/firejail"
+
+[shell.files]
+alacritty = "~/.config/alacritty"
+gitconfig = "~/.gitconfig"
+dircolors = "~/.dircolors"
+fish = "~/.config/fish"
+"starship.toml" = "~/.config/starship.toml"
+
+[emacs.files]
+doom = "~/.doom.d"
+
+[flameshot.files]
+"flameshot.ini" = "~/.config/flameshot/flameshot.ini"
+
+[i3status.files]
+"i3status-rust.toml" = "~/.config/i3status-rust/config.toml"
+
+[xorg.files]
+xinit = "~/.xinitrc"
+i3 = "~/.config/i3"
+#"picom.conf" = "~/.config/picom/picom.conf"
+#"rofi.rasi" = "~/.config/rofi/config.rasi"
+
+[xorg.files.chromium-flags]
+target = "~/.config/chromium-flags.conf"
+type = "template"
+append = """
+--use-gl=desktop
+"""
+
+[picom.files]
+"picom.conf" = "~/.config/picom/picom.conf"
+
+[wayland.files]
+sway = "~/.config/sway"
+wofi = "~/.config/wofi"
+wayland-electron-flags = "~/.config/electron-flags.conf"
+
+[wayland.files.chromium-flags]
+target = "~/.config/chromium-flags.conf"
+type = "template"
+append = """
+--enable-features=UseOzonePlatform
+--ozone-platform=wayland
+"""

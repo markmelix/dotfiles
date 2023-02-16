@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+echo Unmounting disks
+~/scripts/disks unmount
+echo Hibernating
+systemctl hibernate
+echo Went from hibernation successfully!
+echo Mount disks again
+~/scripts/disks mount

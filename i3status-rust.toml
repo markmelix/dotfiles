@@ -1,0 +1,53 @@
+[theme]
+name = "slick"
+
+[theme.overrides]
+warning_bg = "#ED7D3A"
+separator = ""
+
+[icons]
+name = "material-nf"
+
+[[block]]
+block = "focused_window"
+show_marks = "visible"
+max_width = 40
+
+[[block]]
+block = "pacman"
+interval = 3600
+format = "{both}"
+format_singular = "{both}"
+hide_when_uptodate = true
+aur_command = "paru -Qua"
+critical_updates_regex = "linux"
+
+[[block]]
+block = "memory"
+format_mem = "{mem_free;M}/{mem_total;M}"
+clickable = false
+
+[[block]]
+block = "time"
+
+[[block]]
+block = "backlight"
+cycle = [100, 75, 50, 25]
+
+[[block]]
+block = "sound"
+driver = "pulseaudio"
+show_volume_when_muted = true
+headphones_indicator = true
+
+[[block]]
+block = "battery"
+hide_missing = true
+warning = 20
+critical = 10
+
+[[block]]
+block = "keyboard_layout"
+driver = "xkbswitch"
+on_click = "xkb-switch -n"
+interval = 1

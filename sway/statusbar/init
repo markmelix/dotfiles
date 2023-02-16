@@ -1,0 +1,21 @@
+#!/usr/bin/env fish
+
+set required_packages psutil pulsectl
+set venv ~/.config/sway/statusbar/venv
+
+function install_packages
+    for package in $required_packages
+        fd $package --has-results $venv
+        if test $status = 1
+            $venv/bin/pip3 install $package &>/dev/null
+        end
+    end
+end
+
+if test ! -d $venv
+    python3 -m venv $venv
+end
+
+install_packages
+
+$venv/bin/python3 ~/.config/sway/statusbar/statusbar.py

@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+if test -n "$WAYLAND_DISPLAY"
+    wofi --show drun
+    # j4-dmenu-desktop --dmenu='bemenu-run -i' --term=$TERM
+else
+    rofi -show drun
+    # j4-dmenu-desktop --dmenu='dmenu_run' --term=$TERM
+end

@@ -1,0 +1,14 @@
+# -*- mode: i3wm-config -*-
+
+# in order to use gaps you need to disable window titlebars
+# for_window [class=".*"] border pixel 0
+
+# for_window [class=".*"] border normal
+# for_window [class=".*"] title_window_icon true
+
+# Activate smart borders (only when there are effectively no gaps)
+smart_borders no_gaps
+
+# Gaps syntax: gaps [inner|outer|horizontal|vertical|top|left|bottom|right] <px>
+# gaps inner 15
+gaps inner 0

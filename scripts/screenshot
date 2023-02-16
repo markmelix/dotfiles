@@ -1,0 +1,2 @@
+#!/usr/bin/env fish
+import ~/screenshots/$(date +"in %d.%m.%y at %H:%M:%S").png
