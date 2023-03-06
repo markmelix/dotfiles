@@ -105,6 +105,7 @@ alias aurrf="aur -Rcsn"
 
 alias gst="git status"
 
+alias py=python
 alias taskmanager="stacer"
 alias zdate="date +\"%Y%m%d%H%M\""
 alias drag="dragon-drop --on-top"
