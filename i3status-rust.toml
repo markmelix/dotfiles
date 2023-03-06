@@ -28,6 +28,11 @@ format_mem = "{mem_free;M}/{mem_total;M}"
 clickable = false
 
 [[block]]
+block = "cpu"
+interval = 3
+format = "{utilization}"
+
+[[block]]
 block = "time"
 
 [[block]]
