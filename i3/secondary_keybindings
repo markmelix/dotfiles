@@ -11,7 +11,7 @@ bindsym $mod+Control+2 exec emacsclient -cn
 bindsym $mod+Control+3 exec chromium
 
 # start slip box manager
-bindsym $mod+Control+0 exec i3-msg exec obsidian && zotero
+bindsym $mod+Control+0 exec obsidian
 
 # (dis)connect bluetooth headphones
 bindsym $mod+a exec ~/scripts/headphones connect
