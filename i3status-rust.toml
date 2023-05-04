@@ -1,36 +1,34 @@
 [theme]
-name = "slick"
-
+theme = "slick"
 [theme.overrides]
 warning_bg = "#ED7D3A"
 separator = ""
 
 [icons]
-name = "material-nf"
+icons = "material-nf"
 
 [[block]]
 block = "focused_window"
-show_marks = "visible"
-max_width = 40
+format = " $title.str(max_w:40) |"
 
 [[block]]
 block = "pacman"
 interval = 3600
-format = "{both}"
-format_singular = "{both}"
-hide_when_uptodate = true
+format_up_to_date = ""
 aur_command = "paru -Qua"
 critical_updates_regex = "linux"
+[[block.click]]
+button = "left"
+cmd = "fakeroot pacman -Qu --dbpath /tmp/checkup-db-i3statusrs/ | rofi -dmenu"
 
 [[block]]
 block = "memory"
-format_mem = "{mem_free;M}/{mem_total;M}"
-clickable = false
+format = " $icon $mem_used_percents "
 
 [[block]]
 block = "cpu"
 interval = 3
-format = "{utilization}"
+format = " $icon $utilization "
 
 [[block]]
 block = "time"
@@ -47,12 +45,17 @@ headphones_indicator = true
 
 [[block]]
 block = "battery"
-hide_missing = true
+missing_format = ""
 warning = 20
 critical = 10
 
 [[block]]
 block = "keyboard_layout"
-driver = "xkbswitch"
-on_click = "xkb-switch -n"
-interval = 1
+driver = "kbddbus"
+[block.mappings]
+"English (US)" = "en"
+"Russian (N/A)" = "ru"
+[[block.click]]
+button = "left"
+cmd = "xkb-switch -n"
+update = true
