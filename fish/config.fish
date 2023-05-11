@@ -112,6 +112,7 @@ alias zdate="date +\"%Y%m%d%H%M\""
 alias drag="dragon-drop --on-top"
 alias copy="xclip -sel clipboard"
 alias dotfiles="cd $HOME/.dotfiles"
+alias сды="clear;xkb-switch -n"
 
 # Starship is one of the most powerful prompts written in Rust
 eval (starship init fish)
