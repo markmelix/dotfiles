@@ -78,7 +78,7 @@ eval (ssh-agent -c) >/dev/null
 alias cls="clear"
 alias q="exit"
 alias free="free -ht"
-alias cal="cal -m"
+alias cal="cal -3m"
 
 alias ll="ls -l"
 alias la="ls -l -A"
@@ -92,7 +92,7 @@ alias fishcfg="e ~/.config/fish/config.fish"
 alias pkg="sudo pacman"
 alias pkgi="pkg -S"
 alias pkgs="pkg -Ss"
-alias pkgu="pkg -Syu --noconfirm"
+alias pkgu="pkg -Syu --noconfirm && bash ~/.xinitrc"
 alias pkgr="pkg -R"
 alias pkgrf="pkg -Rcsn"
 
