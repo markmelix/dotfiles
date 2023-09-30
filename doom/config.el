@@ -97,7 +97,7 @@
 (after! dap-mode
   (setq dap-auto-configure-mode t)
   (require 'dap-node)
-  (dap-node-setup)
+  ;; (dap-node-setup)
 
   (require 'dap-python)
   (setq dap-python-debugger 'debugpy)
