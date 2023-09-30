@@ -1,5 +1,6 @@
 fish_add_path ~/.local/bin
 fish_add_path ~/.cargo/bin
+fish_add_path ~/.config/emacs/bin
 fish_add_path ~/.emacs.d/bin
 
 function run_on_write
