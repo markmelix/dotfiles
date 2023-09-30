@@ -1,0 +1,17 @@
+#!/usr/bin/fish
+
+i3-msg layout splitv
+
+cd ~/code/fun/longcat-loggers
+alacritty -T "Longcat Logger | Discord bot" -e poetry run python discord_bot.py &
+alacritty -T "Longcat Logger | Telegram bot" -e poetry run python telegram_bot.py &
+sleep 1
+
+cd
+i3-msg exec alacritty
+sleep 1
+
+i3-msg move right
+i3-msg layout tabbed
+i3-msg split v
+i3-msg layout tabbed
