@@ -1,8 +1,8 @@
 # -*- mode: i3wm-config -*-
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Control+1 exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
+bindsym $mod+Control+1 exec alacritty
 
 # start code editor
 bindsym $mod+Control+2 exec emacsclient -cn
@@ -29,3 +29,6 @@ bindsym $mod+Shift+p exec --no-startup-id killall picom
 
 # choose emoji to insert
 bindsym $mod+. exec --no-startup-id emote
+
+# run longcat loggers
+bindsym $mod+Control+l exec --no-startup-id ~/.dotfiles/scripts/longcat
