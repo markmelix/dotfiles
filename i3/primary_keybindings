@@ -89,7 +89,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $system "(e)xit; (r)estart i3; reload (c)onfig; (l)ock; (p)oweroff; (Shift+r)eboot; (h)ibernate; (s)uspend"
+set $system "(e)xit; (r)estart i3; reload (c)onfig; (l)ock; (p)oweroff; (Shift+r)eboot; (s)uspend"
 
 mode $system {
         bindsym c reload
@@ -98,7 +98,6 @@ mode $system {
         bindsym l exec loginctl lock-session && i3-msg mode "default"
         bindsym p exec systemctl poweroff && i3-msg mode "default"
         bindsym Shift+r exec systemctl reboot && i3-msg mode "default"
-        bindsym h exec systemctl hibernate && i3-msg mode "default"
         bindsym s exec systemctl suspend && i3-msg mode "default"
 
         bindsym Return mode "default"
