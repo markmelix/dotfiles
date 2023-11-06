@@ -3,3 +3,6 @@
 [user]
 	email = markmelix@gmail.com
 	name = Mark Meliksetyan
+	signingkey = /home/mark/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh

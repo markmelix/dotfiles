@@ -9,8 +9,12 @@ assign [class="Steam"] $ws8
 assign [class="falloutw.exe"] $ws8
 assign [class="obsidian"] $ws10
 assign [class="Zotero"] $ws10
+assign [class="discord"] $ws4
+assign [class="TelegramDesktop"] $ws4
 
 for_window [class="Chromium"] layout tabbed
+for_window [class="Discord"] layout tabbed
+for_window [class="TelegramDesktop"] layout tabbed
 for_window [class="obsidian"] layout tabbed
 for_window [class="Zotero"] layout tabbed
 
