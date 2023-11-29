@@ -10,5 +10,5 @@ for_window [class=".*"] border pixel 0
 smart_borders no_gaps
 
 # Gaps syntax: gaps [inner|outer|horizontal|vertical|top|left|bottom|right] <px>
-gaps inner 15
+gaps inner 10
 # gaps inner 0
