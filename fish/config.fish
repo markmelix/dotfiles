@@ -93,7 +93,7 @@ alias fishcfg="e ~/.config/fish/config.fish"
 alias pkg="sudo pacman"
 alias pkgi="pkg -S"
 alias pkgs="pkg -Ss"
-alias pkgu="pkg -Syu --noconfirm && bash ~/.xinitrc"
+alias pkgu="pkg -Syu --noconfirm && ~/scripts/setupxinput"
 alias pkgr="pkg -R"
 alias pkgrf="pkg -Rcsn"
 
@@ -113,7 +113,10 @@ alias zdate="date +\"%Y%m%d%H%M\""
 alias drag="dragon-drop --on-top"
 alias copy="xclip -sel clipboard"
 alias dotfiles="cd $HOME/.dotfiles"
-alias сды="clear;xkb-switch -n"
+alias сды="xkb-switch -n;clear"
+
+# restore cursor after plymouth
+tput cvvis
 
 # Starship is one of the most powerful prompts written in Rust
 eval (starship init fish)
