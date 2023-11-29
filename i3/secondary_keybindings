@@ -38,5 +38,5 @@ bindsym $mod+n exec --no-startup-id nmcli con up Netherlands
 bindsym $mod+Shift+n exec --no-startup-id nmcli con down Netherlands
 
 # change gaps in real time
-bindsym $mod+g exec --no-startup-id i3-msg gaps inner all plus 5
-bindsym $mod+Shift+g exec --no-startup-id i3-msg gaps inner all minus 5
+bindsym $mod+Shift+g exec --no-startup-id i3-msg gaps inner all plus 5
+bindsym $mod+g exec --no-startup-id i3-msg gaps inner all minus 5
