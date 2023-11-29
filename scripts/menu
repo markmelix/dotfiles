@@ -4,6 +4,6 @@ if test -n "$WAYLAND_DISPLAY"
     wofi --show drun
     # j4-dmenu-desktop --dmenu='bemenu-run -i' --term=$TERM
 else
-    rofi -show drun
+    rofi -show drun -show-icons
     # j4-dmenu-desktop --dmenu='dmenu_run' --term=$TERM
 end
