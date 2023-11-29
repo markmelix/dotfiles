@@ -92,7 +92,7 @@
   (map! :leader :desc "Blacken Buffer" "m b b" #'python-black-buffer)
   (map! :leader :desc "Blacken Region" "m b r" #'python-black-region)
   (map! :leader :desc "Blacken Statement" "m b s" #'python-black-statement)
-)
+  )
 
 (after! dap-mode
   (setq dap-auto-configure-mode t)
@@ -111,12 +111,12 @@
   (org-roam-db-autosync-mode)
   (add-to-list 'display-buffer-alist
                '("\\*org-roam\\*"
-               (display-buffer-in-side-window)
-               (side . right)
-               (slot . 0)
-               (window-width . 0.33)
-               (window-parameters . ((no-other-window . t)
-                                     (no-delete-other-windows . t))))))
+                 (display-buffer-in-side-window)
+                 (side . right)
+                 (slot . 0)
+                 (window-width . 0.33)
+                 (window-parameters . ((no-other-window . t)
+                                       (no-delete-other-windows . t))))))
 
 (after! org-roam-ui
   (map! :leader
@@ -149,3 +149,30 @@
   (add-hook! 'evil-insert-state-exit-hook #'my/display-set-relative)
 
   (setq display-line-numbers-current-absolute t))
+
+(after! poly-markdown
+  (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode)))
+
+;; (after! google-c-style
+;;   (add-hook! '(c-mode c++-mode) #'google-set-c-style)
+;;   (add-hook! 'c-mode-common #'google-make-newline-indent)
+;;   )
+
+(defun my-c-mode-common-hook ()
+  ;; my customizations for all of c-mode, c++-mode, objc-mode, java-mode
+  (c-set-offset 'substatement-open 0)
+  ;; other customizations can go here
+
+  (setq c++-tab-always-indent t)
+  (setq c-basic-offset 4)                  ;; Default is 2
+  (setq c-indent-level 4)                  ;; Default is 2
+
+  (setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))
+  (setq tab-width 4)
+  (setq indent-tabs-mode t)  ; use spaces only if nil
+  )
+
+(add-hook! 'c-mode-common-hook 'my-c-mode-common-hook)
+
+(after! renpy
+  (add-hook! 'renpy-mode-hook 'visual-line-mode))
