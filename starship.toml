@@ -1,5 +1,5 @@
 # format = " $directory$python$git_branch$cmd_duration\n $character"
-format = " $all"
+format = "$all"
 
 [directory.substitutions]
 "~" = " "
@@ -11,5 +11,5 @@ format = "[$symbol$branch(:$remote_branch)]($style) "
 format = "[祥$duration]($style) "
 
 [character]
-success_symbol = " [❯](bold green)"
-error_symbol = " [❯](bold red)"
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
