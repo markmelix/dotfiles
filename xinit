@@ -34,8 +34,7 @@ fi
 
 #~/scripts/setupxinput
 
-syndaemon -i 0.5 -t -K -R -d
-
-picom -b
+# run compositor
+compfy -b --transparent-clipping^C
 
 exec dbus-launch i3

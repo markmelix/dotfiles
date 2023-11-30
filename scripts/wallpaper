@@ -1,2 +1,2 @@
-#!/usr/bin/env sh
-feh --no-fehbg --recursive --bg-fill --randomize ~/pics/wallpapers
+#!/usr/bin/env fish
+feh --no-fehbg --recursive --bg-fill --randomize ~/pics/wallpapers/(cat ~/pics/wallpapers/current_pack)

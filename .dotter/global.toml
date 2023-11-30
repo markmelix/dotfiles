@@ -1,5 +1,5 @@
 [default]
-depends = ["systemd", "backup", "scripts", "firejail", "shell", "emacs", "flameshot", "xorg", "picom", "i3status"]
+depends = ["systemd", "backup", "scripts", "firejail", "shell", "emacs", "flameshot", "xorg", "compfy", "i3status"]
 
 [systemd.files]
 systemd = "~/.config/systemd/user"
@@ -44,6 +44,9 @@ append = """
 
 [picom.files]
 "picom.conf" = "~/.config/picom/picom.conf"
+
+[compfy.files]
+"compfy.conf" = "~/.config/compfy/compfy.conf"
 
 [wayland.files]
 sway = "~/.config/sway"
