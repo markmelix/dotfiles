@@ -35,6 +35,6 @@ fi
 #~/scripts/setupxinput
 
 # run compositor
-compfy -b --transparent-clipping^C
+compfy --daemon
 
 exec dbus-launch i3
