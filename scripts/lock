@@ -1,7 +1,5 @@
 #!/usr/bin/env fish
 
-killall picom
-
 set switched false
 
 if test (xkb-switch) = ru
@@ -15,5 +13,3 @@ i3lock --nofork -B5 --ignore-empty-password --show-failed-attempts --keylayout 0
 if $switched
     xkb-switch -s ru
 end
-
-picom -b

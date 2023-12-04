@@ -79,7 +79,6 @@ eval (ssh-agent -c) >/dev/null
 alias cls="clear"
 alias q="exit"
 alias free="free -ht"
-alias cal="cal -3m"
 
 alias ll="ls -l"
 alias la="ls -l -A"
@@ -106,6 +105,7 @@ alias aurrf="aur -Rcsn"
 
 alias gst="git status"
 
+alias cal="cal -m"
 alias top="btop"
 alias py="python"
 alias taskmanager="stacer"
