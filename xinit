@@ -36,5 +36,4 @@ fi
 
 # run compositor
 compfy --daemon
-
 exec dbus-launch i3
