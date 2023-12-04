@@ -31,4 +31,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/scripts/lock &
 
 # Simple daemon and library to make per window layout using XKB (X Keyboard
 # Extension).
-exec_always --no-startup-id /usr/bin/kbdd; sleep 2; pkill kbdd; /usr/bin/kbdd
+exec_always --no-startup-id kbdd
+
+# Keyboard layout state applet
+exec --no-startup-id gxkb &

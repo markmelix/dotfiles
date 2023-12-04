@@ -49,13 +49,13 @@ missing_format = ""
 warning = 20
 critical = 10
 
-[[block]]
-block = "keyboard_layout"
-driver = "kbddbus"
-[block.mappings]
-"English (US)" = "en"
-"Russian (N/A)" = "ru"
-[[block.click]]
-button = "left"
-cmd = "xkb-switch -n"
-update = true
+# [[block]]
+# block = "keyboard_layout"
+# driver = "kbddbus"
+# [block.mappings]
+# "English (US)" = "en"
+# "Russian (N/A)" = "ru"
+# [[block.click]]
+# button = "left"
+# cmd = "xkb-switch -n"
+# update = true
