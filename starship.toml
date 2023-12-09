@@ -2,13 +2,13 @@
 format = "$all"
 
 [directory.substitutions]
-"~" = " "
+"~" = ""
 
 [git_branch]
 format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [cmd_duration]
-format = "[祥$duration]($style) "
+format = "[$symbol$duration]($style) "
 
 [character]
 success_symbol = "[❯](bold green)"
