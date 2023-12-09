@@ -19,6 +19,7 @@ for_window [class="obsidian"] layout tabbed
 for_window [class="Zotero"] layout tabbed
 
 for_window [class="Zotero" instance="Toplevel"] floating enable
+for_window [class="Eog"] floating enable
 for_window [class=".*.py"] floating enable
 for_window [class="launcher"] floating enable
 for_window [class="launcher"] border normal
