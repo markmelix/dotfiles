@@ -1,5 +1,5 @@
 [default]
-depends = ["systemd", "backup", "scripts", "firejail", "shell", "emacs", "flameshot", "xorg", "compfy", "i3status"]
+depends = ["systemd", "backup", "scripts", "firejail", "shell", "emacs", "flameshot", "xorg", "compfy", "i3status", "dunst"]
 
 [systemd.files]
 systemd = "~/.config/systemd/user"
@@ -39,7 +39,7 @@ i3 = "~/.config/i3"
 target = "~/.config/chromium-flags.conf"
 type = "template"
 append = """
---use-gl=desktop
+--use-gl=egl
 """
 
 [picom.files]
@@ -47,6 +47,9 @@ append = """
 
 [compfy.files]
 "compfy.conf" = "~/.config/compfy/compfy.conf"
+
+[dunst.files]
+"dunstrc" = "~/.config/dunst/dunstrc"
 
 [wayland.files]
 sway = "~/.config/sway"
