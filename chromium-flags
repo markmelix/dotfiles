@@ -2,3 +2,5 @@
 --enable-gpu-rasterization
 --enable-zero-copy
 --enable-features=VaapiVideoDecoder
+--enable-features=VaapiIgnoreDriverChecks
+--disable-features=UseChromeOSDirectVideoDecoder
