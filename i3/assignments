@@ -20,7 +20,12 @@ for_window [class="Zotero"] layout tabbed
 
 for_window [class="Zotero" instance="Toplevel"] floating enable
 for_window [class="Eog"] floating enable
+for_window [class="Anki"] floating enable
 for_window [class=".*.py"] floating enable
+for_window [class="ark"] floating enable
 for_window [class="launcher"] floating enable
 for_window [class="launcher"] border normal
 for_window [class="launcher"] title_window_icon true
+
+workspace $ws4 output HDMI1
+workspace $ws7 output HDMI1
