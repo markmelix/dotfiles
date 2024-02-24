@@ -34,9 +34,6 @@ fi
 
 #~/scripts/setupxinput
 
-# setup display layout
-~/.screenlayout/layout.sh
-
 # run compositor
 compfy --daemon
 exec dbus-launch i3
