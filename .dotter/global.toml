@@ -34,13 +34,7 @@ xinit = "~/.xinitrc"
 i3 = "~/.config/i3"
 #"picom.conf" = "~/.config/picom/picom.conf"
 #"rofi.rasi" = "~/.config/rofi/config.rasi"
-
-[xorg.files.chromium-flags]
-target = "~/.config/chromium-flags.conf"
-type = "template"
-append = """
---use-gl=egl
-"""
+"chromium-flags" = "~/.config/chromium-flags.conf"
 
 [picom.files]
 "picom.conf" = "~/.config/picom/picom.conf"
