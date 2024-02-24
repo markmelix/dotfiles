@@ -1,7 +1,6 @@
 # -*- mode: i3wm-config -*-
 
-# set wallpaper
-exec --no-startup-id ~/scripts/wallpaper &
+# exec --no-startup-id ~/scripts/wallpaper &
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -35,3 +34,9 @@ exec_always --no-startup-id kbdd
 
 # Keyboard layout state applet
 exec --no-startup-id gxkb &
+
+# set display layout
+exec --no-startup-id ~/.screenlayout/layout.sh
+
+# set wallpaper
+exec --no-startup-id ~/scripts/wallpaper &

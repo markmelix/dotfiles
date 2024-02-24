@@ -7,8 +7,11 @@ bindsym $mod+Control+1 exec alacritty
 # start code editor
 bindsym $mod+Control+2 exec emacsclient -cn
 
-# start web browser
+# start major web browser
 bindsym $mod+Control+3 exec chromium
+
+# start minor web browser
+bindsym $mod+Control+6 exec firefox
 
 # start slip box manager
 bindsym $mod+Control+0 exec obsidian

@@ -4,6 +4,7 @@ assign [class="Alacritty"] $ws1
 assign [class="Emacs"] $ws2
 assign [class="Chromium"] $ws3
 assign [class="KopiaUI"] $ws7
+assign [class="firefox"] $ws6
 assign [class="Timeshift-gtk"] $ws7
 assign [class="Steam"] $ws8
 assign [class="falloutw.exe"] $ws8
@@ -13,6 +14,7 @@ assign [class="discord"] $ws4
 assign [class="TelegramDesktop"] $ws4
 
 for_window [class="Chromium"] layout tabbed
+for_window [class="firefox"] layout tabbed
 for_window [class="Discord"] layout tabbed
 for_window [class="TelegramDesktop"] layout tabbed
 for_window [class="obsidian"] layout tabbed
@@ -27,5 +29,15 @@ for_window [class="launcher"] floating enable
 for_window [class="launcher"] border normal
 for_window [class="launcher"] title_window_icon true
 
-workspace $ws4 output HDMI1
-workspace $ws7 output HDMI1
+workspace $ws1 output eDP1
+workspace $ws2 output eDP1
+workspace $ws3 output eDP1
+workspace $ws4 output eDP1
+workspace $ws5 output eDP1
+
+workspace $ws6 output HDMI1
+
+workspace $ws7 output eDP1
+workspace $ws8 output eDP1
+workspace $ws9 output eDP1
+workspace $ws10 output eDP1
