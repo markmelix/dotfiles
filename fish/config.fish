@@ -114,9 +114,13 @@ alias drag="dragon-drop --on-top"
 alias copy="xclip -sel clipboard"
 alias dotfiles="cd $HOME/.dotfiles"
 alias сды="xkb-switch -n;clear"
+alias lt="exa -aT --color=always --group-directories-first --icons --git-ignore"
 
 # restore cursor after plymouth
 tput cvvis
+
+set -x COMPOSE_PARALLEL_LIMIT 1
+set -x VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT 1
 
 # Starship is one of the most powerful prompts written in Rust
 eval (starship init fish)
