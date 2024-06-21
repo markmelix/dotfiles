@@ -1,5 +1,8 @@
 [default]
-depends = ["systemd", "backup", "scripts", "firejail", "shell", "emacs", "flameshot", "xorg", "compfy", "i3status", "dunst"]
+depends = ["wayland", "scripts", "alacritty", "kitty", "dircolors", "emacs", "wallpapers", "flameshot", "fish", "git"]
+
+[wallpapers.files]
+wallpapers = { target = "~/pics/wallpapers", type = "symbolic" }
 
 [systemd.files]
 systemd = "~/.config/systemd/user"
@@ -13,31 +16,44 @@ scripts = { target = "~/scripts", type = "template" }
 [firejail.files]
 firejail = "~/.config/firejail"
 
-[shell.files]
+[alacritty.files]
 alacritty = "~/.config/alacritty"
+
+[kitty.files]
+"kitty.conf" = { target = "~/.config/kitty/kitty.conf", type = "symbolic" }
+
+[git.files]
 gitconfig = "~/.gitconfig"
+
+[dircolors.files]
 dircolors = "~/.dircolors"
+
+[fish.files]
 fish = "~/.config/fish"
+
+[starship.files]
 "starship.toml" = "~/.config/starship.toml"
 
 [emacs.files]
 doom = "~/.doom.d"
 
 [flameshot.files]
-"flameshot.ini" = "~/.config/flameshot/flameshot.ini"
+"flameshot.ini" = { target = "~/.config/flameshot/flameshot.ini", type = "symbolic" }
 
 [i3status.files]
 "i3status-rust.toml" = "~/.config/i3status-rust/config.toml"
 
-[xorg.files]
+[xinit.files]
 xinit = "~/.xinitrc"
+
+[i3.files]
 i3 = "~/.config/i3"
-#"picom.conf" = "~/.config/picom/picom.conf"
-#"rofi.rasi" = "~/.config/rofi/config.rasi"
-"chromium-flags" = "~/.config/chromium-flags.conf"
 
 [picom.files]
 "picom.conf" = "~/.config/picom/picom.conf"
+
+[chromium.files]
+"chromium-flags" = "~/.config/chromium-flags.conf"
 
 [compfy.files]
 "compfy.conf" = "~/.config/compfy/compfy.conf"
@@ -45,15 +61,12 @@ i3 = "~/.config/i3"
 [dunst.files]
 "dunstrc" = "~/.config/dunst/dunstrc"
 
-[wayland.files]
-sway = "~/.config/sway"
-wofi = "~/.config/wofi"
-wayland-electron-flags = "~/.config/electron-flags.conf"
+[nu.files]
+nushell = "~/.config/nushell"
 
-[wayland.files.chromium-flags]
-target = "~/.config/chromium-flags.conf"
-type = "template"
-append = """
---enable-features=UseOzonePlatform
---ozone-platform=wayland
-"""
+[wayland.files]
+hypr = "~/.config/hypr"
+"hyprland-portals.conf" = "~/.config/xdg-desktop-portal/hyprland-portals.conf"
+wrappedhl = "~/.local/bin/wrappedhl"
+waybar = { target = "~/.config/waybar", type = "symbolic" }
+wofi = "~/.config/wofi"

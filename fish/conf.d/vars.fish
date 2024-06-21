@@ -3,14 +3,14 @@
 # XDG user directories
 set -x XDG_DESKTOP_DIR "$HOME/.desktop"
 set -x XDG_DOCUMENTS_DIR "$HOME/docs"
-set -x XDG_DOWNLOAD_DIR "$HOME/downloads"
+set -x XDG_DOWNLOAD_DIR "$HOME/dls"
 set -x XDG_MUSIC_DIR "$HOME/music"
 set -x XDG_PICTURES_DIR "$HOME/pics"
 set -x XDG_PUBLICSHARE_DIR "$HOME/pub"
 set -x XDG_TEMPLATES_DIR "$HOME/.templates"
-set -x XDG_VIDEOS_DIR "$HOME/videos"
+set -x XDG_VIDEOS_DIR "$HOME/vids"
 
-# VISUAL ontains command to run the full-fledged editor that is used for more
+# VISUAL contains command to run the full-fledged editor that is used for more
 # demanding tasks
 if systemctl --user is-active --quiet emacs
     set -x VISUAL "emacsclient -c"
@@ -35,7 +35,7 @@ else if test -f /usr/bin/vi
 end
 
 # TERM contains default terminal emulator program
-set -x TERM alacritty
+set -x TERM kitty
 set -x TERMINAL $TERM
 
 # BROWSER contains the path to the web browser

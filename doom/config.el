@@ -176,3 +176,65 @@
 
 (after! renpy
   (add-hook! 'renpy-mode-hook 'visual-line-mode))
+
+;; Easy fix of paste on wayland
+;; See https://github.com/doomemacs/doomemacs/issues/5219#issuecomment-918261642
+(setq x-select-request-type 'text/plain\;charset=utf-8)
+
+;; Hard fix of copy-paste on wayland
+;; See https://emacs.stackexchange.com/a/81180
+(when (getenv "WAYLAND_DISPLAY")
+  ;; Without this, copy and pasting from other wayland apps into
+  ;; emacs-pgtk doesn't work.
+  ;; https://www.emacswiki.org/emacs/CopyAndPaste#h5o-4
+  (setq wl-copy-process nil)
+  (defun wl-copy (text)
+    (setq wl-copy-process (make-process :name "wl-copy"
+                                        :buffer nil
+                                        :command '("wl-copy" "-f" "-n")
+                                        :connection-type 'pipe
+                                        :noquery t))
+    (process-send-string wl-copy-process text)
+    (process-send-eof wl-copy-process))
+  (defun wl-paste ()
+    (if (and wl-copy-process (process-live-p wl-copy-process))
+        nil ; should return nil if we're the current paste owner
+      (shell-command-to-string "wl-paste -n | tr -d \r")))
+  (setq interprogram-cut-function 'wl-copy)
+  (setq interprogram-paste-function 'wl-paste))
+
+
+(use-package! select
+  :demand t
+  :custom
+  (save-interprogram-paste-before-kill t)
+  (select-enable-clipboard             t)
+  (selection-coding-system             'utf-8)
+  :init
+  (setq-default wl-copy-process nil)
+  (when (string-prefix-p "wayland" (getenv "WAYLAND_DISPLAY"))
+    (defun wl-copy-handler (text)
+      (setq wl-copy-process (make-process :name "wl-copy"
+                                          :buffer nil
+                                          :command '("wl-copy" "-f" "-n")
+                                          :connection-type 'pipe))
+      (process-send-string wl-copy-process text)
+      (process-send-eof wl-copy-process))
+    (defun wl-paste-handler ()
+      (if (and wl-copy-process (process-live-p wl-copy-process))
+          nil ; should return nil if we're the current paste owner
+        (shell-command-to-string "wl-paste -n | tr -d \r")))
+    (setq interprogram-cut-function 'wl-copy-handler
+          interprogram-paste-function 'wl-paste-handler))
+  )
+
+;; transparent window for rice
+(set-frame-parameter (selected-frame) 'alpha-background 95)
+(add-to-list 'default-frame-alist '(alpha-background . 95))
+(after! solaire-mode
+  (solaire-global-mode -1))
+(custom-set-faces
+ '(default ((t (:background "#12121A"))))
+ '(hl-line ((t (:background "#12121A"))))
+ '(mode-line ((t (:background "#12121A"))))
+ )

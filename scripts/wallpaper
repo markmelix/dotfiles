@@ -1,2 +1,6 @@
-#!/usr/bin/env fish
-feh --no-fehbg --recursive --bg-fill --randomize ~/pics/wallpapers/(cat ~/pics/wallpapers/current_pack)
+#!/usr/bin/sh
+
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    feh --no-fehbg --recursive --bg-fill --randomize ~/pics/wallpapers/(cat ~/pics/wallpapers/chosen_pack)
+else
+fi

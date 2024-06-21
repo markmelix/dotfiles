@@ -1,19 +1,5 @@
-mode=drun
-prompt=Application to run
-term=alacritty
+prompt=
+allow_images=true
 insensitive=true
 no_actions=true
-line_wrap=word
-dynamic_lines=true
-
-key_up=Control_L-k
-key_down=Control_L-j
-key_left=Control_L-h
-key_right=Control_L-l
-key_forward=Tab
-key_backward=ISO_Left_Tab
-key_submit=Control_L-m
-key_exit=Control_L-g
-key_pgup=Control_L-u
-key_pgdn=Control_L-d
-key_expand=Control_L-i
+location=center

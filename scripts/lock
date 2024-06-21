@@ -1,15 +1,15 @@
-#!/usr/bin/env fish
+#!/bin/sh
 
-set switched false
+# set switched false
 
-if test (xkb-switch) = ru
-    set switched true
-    xkb-switch -s us
-end
+# if test (xkb-switch) = ru
+#     set switched true
+#     xkb-switch -s us
+# end
 
 # i3lock --nofork --no-unlock-indicator --ignore-empty-password --image=$HOME/pics/windows_10_desktop.png --pointer=win $argv
 i3lock --nofork -B5 --ignore-empty-password --show-failed-attempts --keylayout 0 --bar-indicator
 
-if $switched
-    xkb-switch -s ru
-end
+# if $switched
+#     xkb-switch -s ru
+# end

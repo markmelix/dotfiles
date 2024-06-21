@@ -55,3 +55,4 @@
 (package! python-black)
 (package! poly-markdown)
 (package! renpy)
+(package! select)
