@@ -1,5 +1,5 @@
 [default]
-depends = ["wayland", "scripts", "alacritty", "kitty", "dircolors", "emacs", "wallpapers", "flameshot", "fish", "git"]
+depends = ["wayland", "scripts", "alacritty", "kitty", "dircolors", "emacs", "wallpapers", "flameshot", "bash", "fish", "git"]
 
 [wallpapers.files]
 wallpapers = { target = "~/pics/wallpapers", type = "symbolic" }
@@ -27,6 +27,9 @@ gitconfig = "~/.gitconfig"
 
 [dircolors.files]
 dircolors = "~/.dircolors"
+
+[bash.files]
+"bashrc" = "~/.bashrc"
 
 [fish.files]
 fish = "~/.config/fish"
@@ -67,6 +70,6 @@ nushell = "~/.config/nushell"
 [wayland.files]
 hypr = "~/.config/hypr"
 "hyprland-portals.conf" = "~/.config/xdg-desktop-portal/hyprland-portals.conf"
-wrappedhl = "~/.local/bin/wrappedhl"
+"hypr/wlinitrc" = "~/.local/bin/wlinitrc"
 waybar = { target = "~/.config/waybar", type = "symbolic" }
 wofi = "~/.config/wofi"
