@@ -21,8 +21,7 @@
     "clock": {
         "timezone": "Europe/Moscow",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "  {:%d.%m.%Y}",
-        "format": " {:%H:%M}"
+        "format": "   {:%a, %d.%m/%y    %R}"
     },
     "backlight": {
         "device": "intel_backlight",
