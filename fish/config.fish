@@ -80,7 +80,7 @@ alias cls="clear"
 alias q="exit"
 alias free="free -ht"
 
-alias ls="lsd"
+alias ls="lsd --group-directories-first"
 alias ll="ls -l"
 alias la="ls -l -A"
 
