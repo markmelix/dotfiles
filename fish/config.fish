@@ -106,6 +106,7 @@ alias aurrf="aur -Rcsn"
 
 alias gst="git status"
 
+alias f="df -h /dev/mapper/system && echo && free -h"
 alias xo="xdg-open"
 alias cal="cal -m"
 alias top="btop"
