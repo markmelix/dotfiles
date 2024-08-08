@@ -106,6 +106,7 @@ alias aurrf="aur -Rcsn"
 
 alias gst="git status"
 
+alias xo="xdg-open"
 alias cal="cal -m"
 alias top="btop"
 alias py="python"

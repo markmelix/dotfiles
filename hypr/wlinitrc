@@ -9,4 +9,7 @@ export ELECTRON_OZONE_PLATFORM_HINT=wayland
 export SDL_VIDEODRIVER=wayland
 export CLUTTER_BACKEND=wayland
 
+# fixes chromium startup error
+rm -rf ~/.config/chromium/Singleton*
+
 exec Hyprland
