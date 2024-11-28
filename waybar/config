@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "battery", "clock", "tray"],
+    "modules-right": ["pulseaudio", "battery", "clock", "custom/localtime", "tray"],
     "hyprland/workspaces": {
          "disable-scroll": true,
          "format": " {icon} ",
@@ -21,7 +21,12 @@
     "clock": {
         "timezone": "Europe/Moscow",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "   {:%a, %d.%m/%y    %R}"
+        "format": "   {:%a, %d.%m/%y}"
+    },
+    "custom/localtime": {
+        "exec": "date +'%H:%M'",
+        "interval": 50,  
+        "format": "{}"  
     },
     "backlight": {
         "device": "intel_backlight",

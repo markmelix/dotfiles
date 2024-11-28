@@ -194,3 +194,11 @@
   (setq xclip-select-enable-clipboard t)
   (setq xclip-mode t)
   (setq xclip-method (quote wl-copy)))
+
+(setq-hook! 'js-mode-hook +format-with-lsp nil)
+(setq-hook! 'js-mode-hook +format-with :none)
+(add-hook 'js-mode-hook 'prettier-js-mode)
+
+(add-to-list 'exec-path "/usr/local/texlive/2024/bin/x86_64-linux")
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2024/bin/x86_64-linux"))
+(map! :leader :desc "Preview mode" "m j" #'latex-preview-pane-mode)

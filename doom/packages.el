@@ -54,5 +54,6 @@
 (package! systemd-mode)
 (package! python-black)
 (package! poly-markdown)
+(package! prettier-js)
 (package! renpy)
 (package! select)

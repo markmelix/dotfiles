@@ -9,6 +9,9 @@ export ELECTRON_OZONE_PLATFORM_HINT=wayland
 export SDL_VIDEODRIVER=wayland
 export CLUTTER_BACKEND=wayland
 
+export ANDROID_HOME=/home/mark/Android/Sdk
+export PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
+
 # fixes chromium startup error
 rm -rf ~/.config/chromium/Singleton*
 

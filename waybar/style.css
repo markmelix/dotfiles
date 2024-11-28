@@ -67,6 +67,7 @@
 #tray,
 #backlight,
 #clock,
+#custom-localtime,
 #battery,
 #pulseaudio,
 #custom-lock,
@@ -74,9 +75,10 @@
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
+  border-radius: 0px 0px 0px 0px;
 }
 
-#clock {
+#custom-localtime {
   color: @blue;
   border-radius: 0px 1rem 1rem 0px;
   margin-right: 1rem;
