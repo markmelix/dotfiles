@@ -195,9 +195,16 @@
   (setq xclip-mode t)
   (setq xclip-method (quote wl-copy)))
 
-(setq-hook! 'js-mode-hook +format-with-lsp nil)
-(setq-hook! 'js-mode-hook +format-with :none)
-(add-hook 'js-mode-hook 'prettier-js-mode)
+;; (setq-hook! 'js-mode-hook +format-with-lsp nil)
+;; (setq-hook! 'js-mode-hook +format-with :none)
+;; (add-hook 'js-mode-hook 'prettier-js-mode)
+
+(setq +format-on-save-disabled-modes
+      '(emacs-lisp-mode  ; elisp's mechanisms are good enough
+        sql-mode         ; sqlformat is currently broken
+        tex-mode         ; latexindent is broken
+        latex-mode
+        ein-ipynb-mode))
 
 (add-to-list 'exec-path "/usr/local/texlive/2024/bin/x86_64-linux")
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2024/bin/x86_64-linux"))
