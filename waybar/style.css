@@ -25,18 +25,16 @@
 @define-color mantle #292c3c;
 @define-color crust #232634;
 
-# #0A080B
-
 * {
   font-family: FantasqueSansMono Nerd Font;
-  font-size: 12px;
+  font-size: 10px;
   min-height: 0;
 }
 
 #waybar {
   background: transparent;
   color: @text;
-  margin: 0px 0px;
+  margin: 0;
 }
 
 #workspaces {
@@ -100,8 +98,9 @@
   color: @yellow;
 }
 
-#backlight, #battery {
-    border-radius: 0;
+#backlight,
+#battery {
+  border-radius: 0;
 }
 
 #pulseaudio {
@@ -116,14 +115,14 @@
 }
 
 #custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
+  border-radius: 1rem 0px 0px 1rem;
+  color: @lavender;
 }
 
 #custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @red;
 }
 
 #tray {
