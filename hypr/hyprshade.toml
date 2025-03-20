@@ -2,10 +2,6 @@
 # keep the user units in sync.
 
 [[shades]]
-name = "vibrance"
-default = true
-
-[[shades]]
 name = "blue-light-filter"
 start_time = 20:00:00
 end_time = 04:00:00

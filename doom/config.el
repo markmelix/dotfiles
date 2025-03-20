@@ -209,3 +209,7 @@
 (add-to-list 'exec-path "/usr/local/texlive/2024/bin/x86_64-linux")
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2024/bin/x86_64-linux"))
 (map! :leader :desc "Preview mode" "m j" #'latex-preview-pane-mode)
+
+(use-package! proof-general
+  :custom
+  (proof-colour-locked nil))
