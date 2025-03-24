@@ -57,3 +57,4 @@
 (package! prettier-js)
 (package! renpy)
 (package! select)
+(package! uv-mode)

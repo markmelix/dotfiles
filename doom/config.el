@@ -213,3 +213,6 @@
 (use-package! proof-general
   :custom
   (proof-colour-locked nil))
+
+(use-package! uv-mode
+  :hook (python-mode . uv-mode-auto-activate-hook))

@@ -123,7 +123,7 @@ alias lt="exa -aT --color=always --group-directories-first --icons --git-ignore"
 # restore cursor after plymouth
 tput cvvis
 
-set -x COMPOSE_BAKE 1
+set -x COMPOSE_BAKE true
 set -x COMPOSE_PARALLEL_LIMIT 1
 set -x VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT 1
 
