@@ -4,6 +4,7 @@ fish_add_path ~/.config/emacs/bin
 fish_add_path ~/.emacs.d/bin
 fish_add_path /usr/local/texlive/2024/bin/x86_64-linux
 fish_add_path (yarn global bin)
+fish_add_path (go env GOPATH)/bin
 
 function run_on_write
     set file $argv

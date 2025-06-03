@@ -216,3 +216,15 @@
 
 (use-package! uv-mode
   :hook (python-mode . uv-mode-auto-activate-hook))
+
+(use-package! lsp-tailwindcss
+  :when (modulep! +lsp)
+  :init
+  (setq! lsp-tailwindcss-add-on-mode t)
+  :config
+  (add-to-list 'lsp-tailwindcss-major-modes 'web-mode))
+
+(define-derived-mode astro-mode web-mode "astro")
+(setq auto-mode-alist
+      (append '((".*\\.astro\\'" . astro-mode))
+              auto-mode-alist))

@@ -58,3 +58,7 @@
 (package! renpy)
 (package! select)
 (package! uv-mode)
+(package! protobuf-mode)
+(when (modulep! +lsp)
+  (package! lsp-tailwindcss
+    :recipe (:host github :repo "merrickluo/lsp-tailwindcss")))
