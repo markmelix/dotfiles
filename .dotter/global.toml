@@ -1,5 +1,5 @@
 [default]
-depends = ["wayland", "scripts", "alacritty", "kitty", "dircolors", "emacs", "wallpapers", "flameshot", "bash", "fish", "git"]
+depends = ["wayland", "scripts", "alacritty", "kitty", "dircolors", "emacs", "wallpapers", "flameshot", "bash", "fish", "git", "nix"]
 
 [wallpapers.files]
 wallpapers = { target = "~/pics/wallpapers", type = "symbolic" }
@@ -73,3 +73,6 @@ hypr = "~/.config/hypr"
 "hypr/wlinitrc" = "~/.local/bin/wlinitrc"
 waybar = { target = "~/.config/waybar", type = "symbolic" }
 wofi = "~/.config/wofi"
+
+[nix.files]
+"nix.conf" = "~/.config/nix/nix.conf"

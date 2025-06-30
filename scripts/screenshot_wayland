@@ -1,0 +1,6 @@
+#!/bin/bash
+timestamp=$(date +"%a %d.%m.%y %Hh %Mm %Ss")
+file_path="/home/mark/pics/shots/${timestamp}.png"
+region=$(slurp)
+grim -g "$region" "$file_path"
+wl-copy --type image/png < "$file_path"
